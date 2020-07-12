@@ -1,11 +1,13 @@
 #include<stdio.h>
+
 int a[10],n;  //定义全局变量
+
 void quicksort(int left,int right)
 {
 	int i,j,t,temp;
 	if(left>right)
 		return;
-	
+
 	temp=a[left];  //temp中存的基准数
 	i=left;
 	j=right;
@@ -15,6 +17,7 @@ void quicksort(int left,int right)
 			j--;
 		while(a[i]<=temp && i<j)  //再从左往右找
 			i++;
+
 		/*交换两个数在数组中的位置*/
 		if(i<j)  //当哨兵i和哨兵j没有相遇时
 		{
@@ -42,6 +45,10 @@ int main()
 	quicksort(1,n);  //快速排序调用
 	for(i=1;i<=n;i++)
 		printf("%d ",a[i]);  //输出排序后的结果
-		
+	printf("\n");
+
+	getchar();
+	getchar();
+	
 	return 0; 
 }

@@ -1,16 +1,20 @@
 #include<stdio.h>
+
 struct student
 {
 	char name[21];
 	int score;
 };  //创建一个结构体用来存储学生的姓名和分数 
+
 int main()
 {
 	struct student a[100],t;
 	int i,j,n;
+
 	scanf("%d",&n);
 	for(i=1;i<=n;i++)  //循环读入n个数到数组中 
 		scanf("%s %d",&a[i].name,&a[i].score);
+
 	/*按分数从高到低进行排序*/
 	for(i=1;i<=n-1;i++)
 	{
@@ -24,8 +28,12 @@ int main()
 			} 
 		}
 	}
+
 	for(i=1;i<=n;i++)  //输出结果
 		printf("%s\n",a[i].name);
-		
+	
+	getchar();
+	getchar();
+
 	return 0; 
 }

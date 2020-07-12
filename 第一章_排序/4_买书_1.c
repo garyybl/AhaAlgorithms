@@ -17,5 +17,10 @@ int main()
 		if(a[i]==1)  //如果这个ISBN出现过就打印出来
 			printf("%d ",i); 
 	} 
+	printf("\n");
+
+	getchar();
+	getchar();
+	
 	return 0;
 } 
